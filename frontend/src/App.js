@@ -18,8 +18,8 @@ function App() {
 
   return (
     <Router>
-      <Header onLoginClick={openLoginPopup} onSignupClick={openSignupPopup} />
-      {showLoginPopup && <LoginPage onClose={closeLoginPopup} />}
+      <Header onLoginClick={openLoginPopup}/>
+      {showLoginPopup && <LoginPage onClose={closeLoginPopup} onSignupClick={openSignupPopup} />}
       {showSignupPopup && <SignupPage onClose={closeSignupPopup} />}
       <Routes>
         <Route path="/" element={<MarketplacePage />} />

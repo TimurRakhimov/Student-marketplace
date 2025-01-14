@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PopupOverlay from './PopupOverlay';
 import './SignupPage.css'; // Reusing the same CSS for consistency
 
-const LoginPage = ({ onClose }) => {
+const LoginPage = ({ onClose, onSignupClick }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -46,6 +46,18 @@ const LoginPage = ({ onClose }) => {
               Login
             </button>
           </form>
+          <p className="redirect-text">
+            Don't have an account?{' '}
+            <button
+              className="redirect-link"
+              onClick={() => {
+                onClose(); // Close the login popup
+                onSignupClick(); // Trigger the signup popup
+              }}
+            >
+              Register!
+            </button>
+          </p>
         </div>
       </div>
     </PopupOverlay>

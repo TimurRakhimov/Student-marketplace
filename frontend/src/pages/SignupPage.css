@@ -102,4 +102,20 @@
    .signup-button:hover {
      background-color: #555;
    }
+
+   .redirect-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  .redirect-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
    
