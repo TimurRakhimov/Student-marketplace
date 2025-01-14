@@ -1,0 +1,77 @@
+.popup-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+   }
+   
+   .popup-container {
+    background: white;
+    border-radius: 12px;
+    padding: 0; /* Remove padding */
+    width: 90%;
+    max-width: 800px; /* Keep the modal responsive */
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row; /* Ensures both parts align side-by-side */
+    overflow: hidden; /* Prevents content overflow */
+  }
+  
+  .signup-left {
+    flex: 1;
+    background: linear-gradient(to bottom right, #6c63ff, #3b3bbf); /* Gradient background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .signup-left h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .signup-left p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .signup-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .signup-right {
+    flex: 1;
+    padding: 30px; /* Adjust the spacing on the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }  
+   
+   .close-button {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 1.5rem;
+     background: none;
+     border: none;
+     cursor: pointer;
+     color: #888;
+   }
+   
+   .close-button:hover {
+     color: #333;
+   }
+   

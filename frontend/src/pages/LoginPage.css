@@ -1,0 +1,92 @@
+.login-container {
+     background: white;
+     border-radius: 12px;
+     padding: 0; /* Remove extra padding */
+     width: 90%;
+     max-width: 800px; /* Maintain consistent max width */
+     position: relative;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+     display: flex;
+     flex-direction: row; /* Side-by-side layout */
+     overflow: hidden;
+   }
+   
+   .login-left {
+     flex: 1;
+     background: linear-gradient(to bottom right, #6c63ff, #3b3bbf); /* Same gradient as signup */
+     color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+   }
+   
+   .login-left h1 {
+     font-size: 2rem;
+     margin-bottom: 10px;
+   }
+   
+   .login-left p {
+     font-size: 1rem;
+     margin-bottom: 20px;
+   }
+   
+   .login-image {
+     width: 100%;
+     max-width: 300px;
+     border-radius: 8px;
+     object-fit: cover;
+   }
+   
+   .login-right {
+     flex: 1;
+     padding: 30px; /* Add padding for the form */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+   }
+   
+   .login-right h2 {
+     font-size: 1.8rem;
+     color: #333;
+     margin-bottom: 20px;
+     text-align: center;
+   }
+   
+   .login-form .form-group {
+     margin-bottom: 20px;
+   }
+   
+   .login-form .form-group label {
+     display: block;
+     font-weight: bold;
+     color: #555;
+     margin-bottom: 5px;
+   }
+   
+   .login-form .form-group input {
+     width: 100%;
+     padding: 10px;
+     font-size: 1rem;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+   }
+   
+   .login-button {
+     width: 100%;
+     padding: 12px;
+     background-color: #333;
+     color: #fff;
+     font-weight: bold;
+     font-size: 1rem;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+   }
+   
+   .login-button:hover {
+     background-color: #555;
+   }
+   

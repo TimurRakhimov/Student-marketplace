@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import MarketplacePage from './pages/MarketplacePage';
+import ItemDetailsPage from './pages/ItemDetailsPage';
+import SignupPage from './pages/SignupPage';
+import Header from './components/Header';
 
 function App() {
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const [showSignupPopup, setShowSignupPopup] = useState(false);
+
+  const openLoginPopup = () => setShowLoginPopup(true);
+  const closeLoginPopup = () => setShowLoginPopup(false);
+
+  const openSignupPopup = () => setShowSignupPopup(true);
+  const closeSignupPopup = () => setShowSignupPopup(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header onLoginClick={openLoginPopup} onSignupClick={openSignupPopup} />
+      {showLoginPopup && <LoginPage onClose={closeLoginPopup} />}
+      {showSignupPopup && <SignupPage onClose={closeSignupPopup} />}
+      <Routes>
+        <Route path="/" element={<MarketplacePage />} />
+        <Route path="/item/:id" element={<ItemDetailsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

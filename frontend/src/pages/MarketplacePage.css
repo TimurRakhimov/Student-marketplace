@@ -1,0 +1,50 @@
+.marketplace {
+     padding: 20px;
+     text-align: center;
+   }
+   
+   h1 {
+     font-size: 2rem;
+     margin-bottom: 20px;
+   }
+   
+   .search-bar {
+     width: 60%;
+     padding: 10px;
+     font-size: 1rem;
+     margin-bottom: 30px;
+     border-radius: 8px;
+     border: 1px solid #ccc;
+   }
+   
+   .items-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 20px;
+     padding: 20px;
+   }
+   
+   .item-card {
+     background-color: #f9f9f9;
+     padding: 15px;
+     text-align: center;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     text-decoration: none;
+     color: #333;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+   }
+   
+   .item-card:hover {
+     transform: scale(1.05);
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   }
+   
+   .item-thumbnail {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }  
+   
